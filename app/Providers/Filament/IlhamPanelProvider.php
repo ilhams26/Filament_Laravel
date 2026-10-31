@@ -30,7 +30,7 @@ class IlhamPanelProvider extends PanelProvider
             ->login()
             ->brandName('Toko Ilham Ghazali')
             ->colors([
-                'primary' => Color::Blue,
+                'primary' => Color::Orange,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
