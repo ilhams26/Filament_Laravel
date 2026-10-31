@@ -26,7 +26,7 @@ class IlhamPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('admin')
+            ->path('dashboard')
             ->login()
             ->brandName('Toko Ilham Ghazali')
             ->colors([
