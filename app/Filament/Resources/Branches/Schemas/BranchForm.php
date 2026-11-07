@@ -20,11 +20,13 @@ class BranchForm
                 TextInput::make('telepon')
                     ->tel(),
                 TextInput::make('latitude')
-                    ->required()
-                    ->numeric(),
+                    ->required()->numeric()
+                    ->minValue(-90)->maxValue(90)
+                    ->helperText('Contoh: -6.1754'),
                 TextInput::make('longitude')
-                    ->required()
-                    ->numeric(),
+                    ->required()->numeric()
+                    ->minValue(-180)->maxValue(180)
+                    ->helperText('Contoh: 106.8272'),
             ]);
     }
 }
