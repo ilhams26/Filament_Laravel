@@ -28,6 +28,15 @@
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+        const markers = [];
+        branches.forEach(b => {
+            const m = L.marker([b.latitude, b.longitude]).addTo(map);
+            m.bindPopup('<b>' + b.nama + '</b><br>' + b.alamat);
+            markers.push(m);
+        });
+        if (markers.length) {
+            map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
+        }
     </script>
 </body>
 
