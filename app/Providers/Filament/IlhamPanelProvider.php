@@ -2,6 +2,9 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\Branches\BranchResource;
+use App\Filament\Resources\Categories\CategoryResource;
+use App\Filament\Resources\Products\ProductResource;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -31,6 +34,11 @@ class IlhamPanelProvider extends PanelProvider
             ->brandName('Toko Ilham Ghazali')
             ->colors([
                 'primary' => Color::Orange,
+            ])
+            ->resources([
+                CategoryResource::class,
+                ProductResource::class,
+                BranchResource::class,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')

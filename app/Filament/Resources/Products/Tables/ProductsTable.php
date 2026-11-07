@@ -15,7 +15,7 @@ class ProductsTable
     {
         return $table
             ->columns([
-                TextColumn::make('name')
+                TextColumn::make('nama')
                     ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),

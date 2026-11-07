@@ -11,7 +11,7 @@ class ProductInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('name'),
+                TextEntry::make('nama'),
                 TextEntry::make('slug'),
                 TextEntry::make('description')
                     ->placeholder('-')

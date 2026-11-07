@@ -12,7 +12,7 @@ class ProductForm
     {
         return $schema
             ->components([
-                TextInput::make('name')
+                TextInput::make('nama')
                     ->required(),
                 TextInput::make('slug')
                     ->required(),
